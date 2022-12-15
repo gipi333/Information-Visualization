@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title> Paris en ligne  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="style_1.css">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+
+  <div class="grid">
+    <div class="childbis">Cote par pays</div>
+    <div class="child">
+      <button class="country-btn" id="country_button1" onclick="togglePopup();pays_all('1')" > </button>
+      <button class="country-btn" id="country_button2" onclick="togglePopup();pays_all('2')" > </button>
+      <button class="country-btn" id="country_button3" onclick="togglePopup();pays_all('3')" > </button>
+      <button class="country-btn" id="country_button4" onclick="togglePopup();pays_all('4')"> </button>
+      <button class="country-btn" id="country_button5" onclick="togglePopup();pays_all('5')"> </button>
+      <button class="country-btn" id="country_button6" onclick="togglePopup();pays_all('6')"> </button>
+      <button class="country-btn" id="country_button7" onclick="togglePopup();pays_all('7')"> </button>
+      <button class="country-btn" id="country_button8" onclick="togglePopup();pays_all('8')"> </button>
+      <button class="country-btn" id="country_button9" onclick="togglePopup();pays_all('9')"> </button>
+      <button class="country-btn" id="country_button10" onclick="togglePopup();pays_all('10')"> </button>
+      <button class="country-btn" id="country_button11" onclick="togglePopup();pays_all('11')"> </button>
+      <button class="country-btn" id="country_button12" onclick="togglePopup();pays_all('12')"> </button>
+      <button class="country-btn" id="country_button13" onclick="togglePopup();pays_all('13')"> </button>
+      <button class="country-btn" id="country_button14" onclick="togglePopup();pays_all('14')"> </button>
+      <button class="country-btn" id="country_button15" onclick="togglePopup();pays_all('15')"> </button>
+      <button class="country-btn" id="country_button16" onclick="togglePopup();pays_all('16')"> </button>
+      <button class="country-btn" id="country_button17" onclick="togglePopup();pays_all('17')"> </button>
+      <button class="country-btn" id="country_button18" onclick="togglePopup();pays_all('18')"> </button>
+      <button class="country-btn" id="country_button19" onclick="togglePopup();pays_all('19')"> </button>
+      <button class="country-btn" id="country_button20" onclick="togglePopup();pays_all('20')"> </button>
+      <button class="country-btn" id="country_button21" onclick="togglePopup();pays_all('21')"> </button>
+      <button class="country-btn" id="country_button22" onclick="togglePopup();pays_all('22')"> </button>
+      <button class="country-btn" id="country_button23" onclick="togglePopup();pays_all('23')"> </button>
+      <button class="country-btn" id="country_button24" onclick="togglePopup();pays_all('24')"> </button>
+      <button class="country-btn" id="country_button25" onclick="togglePopup();pays_all('25')"> </button>
+      <button class="country-btn" id="country_button26" onclick="togglePopup();pays_all('26')"> </button>
+      <button class="country-btn" id="country_button27" onclick="togglePopup();pays_all('27')"> </button>
+      <button class="country-btn" id="country_button28" onclick="togglePopup();pays_all('28')"> </button>
+      <button class="country-btn" id="country_button29" onclick="togglePopup();pays_all('29')"> </button>
+      <button class="country-btn" id="country_button30" onclick="togglePopup();pays_all('30')"> </button>
+      <button class="country-btn" id="country_button31" onclick="togglePopup();pays_all('31')"> </button>
+      <button class="country-btn" id="country_button32" onclick="togglePopup();pays_all('32')"> </button>
+      <button class="country-btn" id="country_button33" onclick="togglePopup();pays_all('33')"> </button>
+      <button class="country-btn" id="country_button34" onclick="togglePopup();pays_all('34')"> </button>
+      <button class="country-btn" id="country_button35" onclick="togglePopup();pays_all('35')"> </button>
+      <button class="country-btn" id="country_button36" onclick="togglePopup();pays_all('36')"> </button>
+      <button class="country-btn" id="country_button37" onclick="togglePopup();pays_all('37')"> </button>
+      <button class="country-btn" id="country_button38" onclick="togglePopup();pays_all('38')"> </button>
+      <button class="country-btn" id="country_button39" onclick="togglePopup();pays_all('39')"> </button>
+      <button class="country-btn" id="country_button40" onclick="togglePopup();pays_all('40')"> </button>
+      <button class="country-btn" id="country_button41" onclick="togglePopup();pays_all('41')"> </button>
+      <button class="country-btn" id="country_button42" onclick="togglePopup();pays_all('42')"> </button>
+      <button class="country-btn" id="country_button43" onclick="togglePopup();pays_all('43')"> </button>
+      <button class="country-btn" id="country_button44" onclick="togglePopup();pays_all('44')"> </button>
+      <button class="country-btn" id="country_button45" onclick="togglePopup();pays_all('45')"> </button>
+      <button class="country-btn" id="country_button46" onclick="togglePopup();pays_all('46')"> </button>
+      <button class="country-btn" id="country_button47" onclick="togglePopup();pays_all('47')"> </button>
+      <button class="country-btn" id="country_button48" onclick="togglePopup();pays_all('48')"> </button>
+      <button class="country-btn" id="country_button49" onclick="togglePopup();pays_all('49')"> </button>
+      <button class="country-btn" id="country_button50" onclick="togglePopup();pays_all('50')"> </button>
+      <button class="country-btn" id="country_button51" onclick="togglePopup();pays_all('51')"> </button>
+      <button class="country-btn" id="country_button52" onclick="togglePopup();pays_all('52')"> </button>
+      <button class="country-btn" id="country_button53" onclick="togglePopup();pays_all('53')"> </button>
+      <button class="country-btn" id="country_button54" onclick="togglePopup();pays_all('54')"> </button>
+      <button class="country-btn" id="country_button55" onclick="togglePopup();pays_all('55')"> </button>
+      <button class="country-btn" id="country_button56" onclick="togglePopup();pays_all('56')"> </button>
+      <button class="country-btn" id="country_button57" onclick="togglePopup();pays_all('57')"> </button>
+      <button class="country-btn" id="country_button58" onclick="togglePopup();pays_all('58')"> </button>
+      <button class="country-btn" id="country_button59" onclick="togglePopup();pays_all('59')"> </button>
+      <button class="country-btn" id="country_button60" onclick="togglePopup();pays_all('60')"> </button>
+      <button class="country-btn" id="country_button61" onclick="togglePopup();pays_all('61')"> </button>
+      <button class="country-btn" id="country_button62" onclick="togglePopup();pays_all('62')"> </button>
+      <button class="country-btn" id="country_button63" onclick="togglePopup();pays_all('63')"> </button>
+      <button class="country-btn" id="country_button64" onclick="togglePopup();pays_all('64')"> </button>
+      <button class="country-btn" id="country_button65" onclick="togglePopup();pays_all('65')"> </button>
+      <button class="country-btn" id="country_button66" onclick="togglePopup();pays_all('66')"> </button>
+      <button class="country-btn" id="country_button67" onclick="togglePopup();pays_all('67')"> </button>
+      <button class="country-btn" id="country_button68" onclick="togglePopup();pays_all('68')"> </button>
+      <button class="country-btn" id="country_button69" onclick="togglePopup();pays_all('69')"> </button>
+      <button class="country-btn" id="country_button70" onclick="togglePopup();pays_all('70')"> </button>
+      <button class="country-btn" id="country_button71" onclick="togglePopup();pays_all('71')"> </button>
+      <button class="country-btn" id="country_button72" onclick="togglePopup();pays_all('72')"> </button>
+      <button class="country-btn" id="country_button73" onclick="togglePopup();pays_all('73')"> </button>
+      <button class="country-btn" id="country_button74" onclick="togglePopup();pays_all('74')"> </button>
+      <button class="country-btn" id="country_button75" onclick="togglePopup();pays_all('75')"> </button>
+      <button class="country-btn" id="country_button76" onclick="togglePopup();pays_all('76')"> </button>
+      <button class="country-btn" id="country_button77" onclick="togglePopup();pays_all('77')"> </button>
+      <button class="country-btn" id="country_button78" onclick="togglePopup();pays_all('78')"> </button>
+      <button class="country-btn" id="country_button79" onclick="togglePopup();pays_all('79')"> </button>
+      <button class="country-btn" id="country_button80" onclick="togglePopup();pays_all('80')"> </button>
+      <button class="country-btn" id="country_button81" onclick="togglePopup();pays_all('81')"> </button>
+      <button class="country-btn" id="country_button82" onclick="togglePopup();pays_all('82')"> </button>
+      <button class="country-btn" id="country_button83" onclick="togglePopup();pays_all('83')"> </button>
+      <button class="country-btn" id="country_button84" onclick="togglePopup();pays_all('84')"> </button>
+      <button class="country-btn" id="country_button85" onclick="togglePopup();pays_all('85')"></button>
+      <button class="country-btn" id="country_button86" onclick="togglePopup();pays_all('86')"> </button>
+      <button class="country-btn" id="country_button87" onclick="togglePopup();pays_all('87')"> </button>
+      <button class="country-btn" id="country_button88" onclick="togglePopup();pays_all('88')"> </button>
+      <button class="country-btn" id="country_button89" onclick="togglePopup();pays_all('89')"> </button>
+      <button class="country-btn" id="country_button90" onclick="togglePopup();pays_all('90')"> </button>
+      <button class="country-btn" id="country_button91" onclick="togglePopup();pays_all('91')"> </button>
+      <button class="country-btn" id="country_button92" onclick="togglePopup();pays_all('92')"> </button>
+      <button class="country-btn" id="country_button93" onclick="togglePopup();pays_all('93')"> </button>
+      <button class="country-btn" id="country_button94" onclick="togglePopup();pays_all('94')"> </button>
+      <button class="country-btn" id="country_button95" onclick="togglePopup();pays_all('95')"> </button>
+      <button class="country-btn" id="country_button96" onclick="togglePopup();pays_all('96')"> </button>
+      <button class="country-btn" id="country_button97" onclick="togglePopup();pays_all('97')"> </button>
+      <button class="country-btn" id="country_button98" onclick="togglePopup();pays_all('98')"> </button>
+      <button class="country-btn" id="country_button99" onclick="togglePopup();pays_all('99')"> </button>
+      <button class="country-btn" id="country_button100" onclick="togglePopup();pays_all('100')"> </button>
+      <button class="country-btn" id="country_button101" onclick="togglePopup();pays_all('101')"> </button>
+      <button class="country-btn" id="country_button102" onclick="togglePopup();pays_all('102')"> </button>
+      <button class="country-btn" id="country_button103" onclick="togglePopup();pays_all('103')"> </button>
+      <button class="country-btn" id="country_button104" onclick="togglePopup();pays_all('104')"> </button>
+      <button class="country-btn" id="country_button105" onclick="togglePopup();pays_all('105')"> </button>
+      <button class="country-btn" id="country_button106" onclick="togglePopup();pays_all('106')"> </button>
+      <button class="country-btn" id="country_button107" onclick="togglePopup();pays_all('107')"> </button>
+      <button class="country-btn" id="country_button108" onclick="togglePopup();pays_all('108')"> </button>
+      <button class="country-btn" id="country_button109" onclick="togglePopup();pays_all('109')"> </button>
+      <button class="country-btn" id="country_button110" onclick="togglePopup();pays_all('110')"> </button>
+      <button class="country-btn" id="country_button111" onclick="togglePopup();pays_all('111')"> </button>
+      <button class="country-btn" id="country_button112" onclick="togglePopup();pays_all('112')"> </button>
+      <button class="country-btn" id="country_button113" onclick="togglePopup();pays_all('113')"> </button>
+      <button class="country-btn" id="country_button114" onclick="togglePopup();pays_all('114')"> </button>
+      <button class="country-btn" id="country_button115" onclick="togglePopup();pays_all('115')"> </button>
+      <button class="country-btn" id="country_button116" onclick="togglePopup();pays_all('116')"> </button>
+      <button class="country-btn" id="country_button117" onclick="togglePopup();pays_all('117')"> </button>
+      <button class="country-btn" id="country_button118" onclick="togglePopup();pays_all('118')"> </button>
+      <button class="country-btn" id="country_button119" onclick="togglePopup();pays_all('119')"> </button>
+      <button class="country-btn" id="country_button120" onclick="togglePopup();pays_all('120')"> </button>
+      <button class="country-btn" id="country_button121" onclick="togglePopup();pays_all('121')"> </button>
+      <button class="country-btn" id="country_button122" onclick="togglePopup();pays_all('122')"> </button>
+      <button class="country-btn" id="country_button123" onclick="togglePopup();pays_all('123')"> </button>
+      <button class="country-btn" id="country_button124" onclick="togglePopup();pays_all('124')"> </button>
+      <button class="country-btn" id="country_button125" onclick="togglePopup();pays_all('125')"> </button>
+      <button class="country-btn" id="country_button126" onclick="togglePopup();pays_all('126')"> </button>
+      <button class="country-btn" id="country_button127" onclick="togglePopup();pays_all('127')"> </button>
+      <button class="country-btn" id="country_button128" onclick="togglePopup();pays_all('128')"> </button>
+      <button class="country-btn" id="country_button129" onclick="togglePopup();pays_all('129')"> </button>
+      <button class="country-btn" id="country_button130" onclick="togglePopup();pays_all('130')"> </button>
+      <button class="country-btn" id="country_button131" onclick="togglePopup();pays_all('131')"> </button>
+      <button class="country-btn" id="country_button132" onclick="togglePopup();pays_all('132')"> </button>
+      <button class="country-btn" id="country_button133" onclick="togglePopup();pays_all('133')"> </button>
+      <button class="country-btn" id="country_button134" onclick="togglePopup();pays_all('134')"> </button>
+      <button class="country-btn" id="country_button135" onclick="togglePopup();pays_all('135')"> </button>
+      <button class="country-btn" id="country_button136" onclick="togglePopup();pays_all('136')"> </button>
+      <button class="country-btn" id="country_button137" onclick="togglePopup();pays_all('137')"> </button>
+      <button class="country-btn" id="country_button138" onclick="togglePopup();pays_all('138')"> </button>
+      <button class="country-btn" id="country_button139" onclick="togglePopup();pays_all('139')"> </button>
+      <button class="country-btn" id="country_button140" onclick="togglePopup();pays_all('140')"> </button>
+      <button class="country-btn" id="country_button141" onclick="togglePopup();pays_all('141')"> </button>
+      <button class="country-btn" id="country_button142" onclick="togglePopup();pays_all('142')"> </button>
+      <button class="country-btn" id="country_button143" onclick="togglePopup();pays_all('143')"> </button>
+      <button class="country-btn" id="country_button144" onclick="togglePopup();pays_all('144')"> </button>
+      <button class="country-btn" id="country_button145" onclick="togglePopup();pays_all('145')"> </button>
+      <button class="country-btn" id="country_button146" onclick="togglePopup();pays_all('146')"> </button>
+      <button class="country-btn" id="country_button147" onclick="togglePopup();pays_all('147')"> </button>
+      <button class="country-btn" id="country_button148" onclick="togglePopup();pays_all('148')"> </button>
+      <button class="country-btn" id="country_button149" onclick="togglePopup();pays_all('149')"> </button>
+      <button class="country-btn" id="country_button150" onclick="togglePopup();pays_all('150')"> </button>
+      <button class="country-btn" id="country_button151" onclick="togglePopup();pays_all('151')"> </button>
+      <button class="country-btn" id="country_button152" onclick="togglePopup();pays_all('152')"> </button>
+      <button class="country-btn" id="country_button153" onclick="togglePopup();pays_all('153')"> </button>
+      <button class="country-btn" id="country_button154" onclick="togglePopup();pays_all('154')"> </button>
+      <button class="country-btn" id="country_button155" onclick="togglePopup();pays_all('155')"> </button>
+      <button class="country-btn" id="country_button156" onclick="togglePopup();pays_all('156')"> </button>
+      <button class="country-btn" id="country_button157" onclick="togglePopup();pays_all('157')"> </button>
+      <button class="country-btn" id="country_button158" onclick="togglePopup();pays_all('158')"> </button>
+      <button class="country-btn" id="country_button159" onclick="togglePopup();pays_all('159')"> </button>
+      <button class="country-btn" id="country_button160" onclick="togglePopup();pays_all('160')"> </button>
+      <button class="country-btn" id="country_button161" onclick="togglePopup();pays_all('161')"> </button>
+      <button class="country-btn" id="country_button162" onclick="togglePopup();pays_all('162')"> </button>
+      <button class="country-btn" id="country_button163" onclick="togglePopup();pays_all('163')"> </button>
+      <button class="country-btn" id="country_button164" onclick="togglePopup();pays_all('164')"> </button>
+      <button class="country-btn" id="country_button165" onclick="togglePopup();pays_all('165')"> </button>
+      <button class="country-btn" id="country_button166" onclick="togglePopup();pays_all('166')"> </button>
+      <button class="country-btn" id="country_button167" onclick="togglePopup();pays_all('167')"> </button>
+      <button class="country-btn" id="country_button168" onclick="togglePopup();pays_all('168')"> </button>
+      <button class="country-btn" id="country_button169" onclick="togglePopup();pays_all('169')"> </button>
+      <button class="country-btn" id="country_button170" onclick="togglePopup();pays_all('170')"> </button>
+      <button class="country-btn" id="country_button171" onclick="togglePopup();pays_all('171')"> </button>
+      <button class="country-btn" id="country_button172" onclick="togglePopup();pays_all('172')"> </button>
+      <button class="country-btn" id="country_button173" onclick="togglePopup();pays_all('173')"> </button>
+      <button class="country-btn" id="country_button174" onclick="togglePopup();pays_all('174')"> </button>
+      <button class="country-btn" id="country_button175" onclick="togglePopup();pays_all('175')"> </button>
+      <button class="country-btn" id="country_button176" onclick="togglePopup();pays_all('176')"> </button>
+      <button class="country-btn" id="country_button177" onclick="togglePopup();pays_all('177')"> </button>
+      <button class="country-btn" id="country_button178" onclick="togglePopup();pays_all('178')"> </button>
+      <button class="country-btn" id="country_button179" onclick="togglePopup();pays_all('179')"> </button>
+      <button class="country-btn" id="country_button180" onclick="togglePopup();pays_all('180')"> </button>
+      <button class="country-btn" id="country_button181" onclick="togglePopup();pays_all('181')"> </button>
+      <button class="country-btn" id="country_button182" onclick="togglePopup();pays_all('182')"> </button>
+      <button class="country-btn" id="country_button183" onclick="togglePopup();pays_all('183')"> </button>
+      <button class="country-btn" id="country_button184" onclick="togglePopup();pays_all('184')"> </button>
+      <button class="country-btn" id="country_button185" onclick="togglePopup();pays_all('185')"> </button>
+      <button class="country-btn" id="country_button186" onclick="togglePopup();pays_all('186')"> </button>
+      <button class="country-btn" id="country_button187" onclick="togglePopup();pays_all('187')"> </button>
+      <button class="country-btn" id="country_button188" onclick="togglePopup();pays_all('188')"> </button>
+      <button class="country-btn" id="country_button189" onclick="togglePopup();pays_all('189')"> </button>
+      <button class="country-btn" id="country_button190" onclick="togglePopup();pays_all('190')"> </button>
+      <button class="country-btn" id="country_button191" onclick="togglePopup();pays_all('191')"> </button>
+      <button class="country-btn" id="country_button192" onclick="togglePopup();pays_all('192')"> </button>
+      <button class="country-btn" id="country_button193" onclick="togglePopup();pays_all('193')"> </button>
+      <button class="country-btn" id="country_button194" onclick="togglePopup();pays_all('194')"> </button>
+      <button class="country-btn" id="country_button195" onclick="togglePopup();pays_all('195')"> </button>
+      <button class="country-btn" id="country_button196" onclick="togglePopup();pays_all('196')"> </button>
+      <button class="country-btn" id="country_button197" onclick="togglePopup();pays_all('197')"> </button>
+      <button class="country-btn" id="country_button198" onclick="togglePopup();pays_all('198')"> </button>
+      <button class="country-btn" id="country_button199" onclick="togglePopup();pays_all('199')"> </button>
+      <button class="country-btn" id="country_button200" onclick="togglePopup();pays_all('200')"> </button>
+      <button class="country-btn" id="country_button201" onclick="togglePopup();pays_all('201')"> </button>
+      <button class="country-btn" id="country_button202" onclick="togglePopup();pays_all('202')"> </button>
+      <button class="country-btn" id="country_button203" onclick="togglePopup();pays_all('203')"> </button>
+      <button class="country-btn" id="country_button204" onclick="togglePopup();pays_all('204')"> </button>
+      <button class="country-btn" id="country_button205" onclick="togglePopup();pays_all('205')"> </button>
+      <button class="country-btn" id="country_button206" onclick="togglePopup();pays_all('206')"> </button>
+      <button class="country-btn" id="country_button207" onclick="togglePopup();pays_all('207')"> </button>
+      <button class="country-btn" id="country_button208" onclick="togglePopup();pays_all('208')"> </button>
+    </div>       
+             
+        <div class="child2"> Cata-guesseur </div>  
+
+        <div class="child5_bis" id="child5_bis">Nombre de décès par tremblement de terre</div>
+
+        <div class="child5_ter" id="selector"></div>
+  
+        <div class="child5">
+          <div class='layout'>
+            <div class='container'>
+              <svg id='svg1'></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="child5_quad">
+          <i> * L'identifiant des évènements est fourni sous la forme du nombre précédé du caractère #. </i>
+          <br><i> ** Seuls les évènements dont le nombre de décès est connu sont affichés. </i>
+        </div>
+
+        <div class="child4_bis" id="child4_bis"> Catégorie de dommages par tremblement de terre</div>
+
+        <div class="child4_ter" id="selector2"></div>
+
+        <div class="child4">
+          <div class='layout'>
+            <div class='container2'>
+              <svg id='svg2'></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="child4_quad">
+          <i> * L'identifiant des évènements est fourni sous la forme du nombre précédé du caractère #. </i>
+          <br><i> ** Seuls les évènements dont la catégorie de dommages est connu sont affichés. </i>
+        </div>
+
+        <div class="child4_quint">
+          <p>Les catégories de dommages sont définies de la façon suivante :</p>
+          <ul>
+            <li>0 : Dommages nuls. </li>
+            <li>1 : Dommages estimés à une valeur inférieure à 1 million de dollars.</li>
+            <li>2 : Dommages estimés à une valeur entre 1 et 5 millions de dollars.</li>
+            <li>3 : Dommages estimés à une valeur entre 5 et 24 millions de dollars.</li>
+            <li>4 : Dommages estimés à une valeur supérieure à 25 millions de dollars.</li>
+          </ul> 
+        </div>
+
+        <div class="child3" >
+          
+          <div id="map" ></div>
+
+          <div class='map-overlay' id='features'><div id='pd'><p>    Placez le curseur sur un pays!</p></div></div>
+
+          <div id="county-legend3" class="legend" style="display: none">
+            <h4>Nombre de tsunamis</h4>            
+            <div><span style="background-color: #000000"></span>> 150</div>
+            <div><span style="background-color: #08519c"></span>100-150</div>
+            <div><span style="background-color: #2171b5"></span>75-100</div>
+            <div><span style="background-color: #4292c6"></span>50-75</div>
+            <div><span style="background-color: #6baed6"></span>25-50</div>
+            <div><span style="background-color: #9ecae1"></span>10-25</div>
+            <div><span style="background-color: #c6dbef"></span>5-10</div>
+            <div><span style="background-color: #f6f6f4"></span>5 > </div>
+          </div>
+
+          <div id="county-legend2" class="legend" style="display: none">
+            <h4>Nombre de tremblements de terre</h4>
+            <div><span style="background-color: #000000"></span>> 300</div>
+            <div><span style="background-color: #662506"></span>200-300</div>
+            <div><span style="background-color: #993404"></span>100-200</div>
+            <div><span style="background-color: #cc4c02"></span>75-100</div>
+            <div><span style="background-color: #ec7014"></span>50-75</div>
+            <div><span style="background-color: #fe9929"></span>25-50</div>
+            <div><span style="background-color: #fec44f"></span>5-25</div>
+            <div><span style="background-color: #f6f6f4"></span>5 > </div>
+          </div>
+
+          <div id="county-legend1" class="legend" style="display: none">
+            <h4>Nombre de éruptions volcaniques</h4>
+            <div><span style="background-color: #000000"></span>> 150</div>
+            <div><span style="background-color: #67000d"></span>100-150</div>
+            <div><span style="background-color: #a50f15"></span>60-90</div>
+            <div><span style="background-color: #cb181d"></span>30-60</div>
+            <div><span style="background-color: #ef3b2c"></span>10-30</div>
+            <div><span style="background-color: #fb6a4a"></span>5-10</div>
+            <div><span style="background-color: #fc9272"></span>2-5</div>
+            <div><span style="background-color: #f6f6f4"></span>2 > </div>
+          </div>
+        </div>
+        
+        <div class="child7">     
+            <select id ="lister" onchange="get_value('1')" style="height:50px;width:292px" > 
+              
+              <option value = "Nombre de tsunamis pour chaque pays"> Tsunami </option>
+              <option value = "Nombre de tremblements de terre pour chaque pays" selected > Tremblement de terre </option>
+              <option value = "Nombre d'éruptions volcaniques pour chaque pays"> Eruption volcanique </option>
+
+            </select>
+        </div>
+
+        <div class="child6" id="Titre de la carte">Nombre de tremblements de terre pour chaque pays</div>
+
+        <div class="pari_button"  onclick="togglePopup()"> Parier maintenant  sur la prochaine catastrophe </div>
+             
+        <div class="gallery">
+            <img src="logo.png">
+        </div>   
+    </div>
+
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+
+        <div class="close-btn" onclick="togglePopup()">&times;</div>
+        
+        <div class="grid2">
+
+          <div class="childpopup1"> Placez votre pari ! </div>
+
+          <div class="childpopup2"> Attention : Afin de valider votre billet, il vous est demandé 
+                  d'entrer le montant exacte de votre mise, le nom du pays sur lequel placez votre mise, le type de catastrophe, 
+                  le nombre de décès que vous estimez, ainsi que la catégorie de dommages engendrés par 
+                  la catastrophe naturelle. Ces trois derniers critères permettent de doubler le montant du 
+                  gain en cas de billet gagnant. Notez que celui-ci considéré comme est gagnant uniquement 
+                  si le nom du pays est correct !  </div>
+
+          <div class="childpopup3"> Votre mise : </div>
+          <div class="childpopup4"> <form> <input type="text" id="mise" name="lname" style="height:30px;width:150px" ><br></form></div>
+
+          <div class="childpopup5"> Nom du pays : </div>
+          <div class="childpopup6"><form><input type="text" id="country" style="height:30px;width:150px" > <br></form></div>
+
+          <div class="childpopup11"> Type de catastrophe : </div>
+          <div class="childpopup12">
+            <select id="lister2" onchange="get_value('boutton')" style="height:30px;width:155px">
+              <option value="Nombre de tsunamis pour chaque pays">Tsunami</option>
+              <option value="Nombre de tremblements de terre pour chaque pays"selected>Tremblement de terre</option>
+              <option value="Nombre d'éruptions volcaniques pour chaque pays">Eruption volcanique</option>
+            </select>
+          </div>
+
+          <div class="childpopup7"> Nombre de décès : </div>
+          <div class="childpopup8"><form> <input type="text" id="deces" name="lname" style="height:30px;width:150px"><br></form></div>
+
+          <div class="childpopup9"> Dommages engendrés : </div>
+          <div class="childpopup10"><form><input type="text" id="dommages" name="lname" style="height:30px;width:150px"><br></form></div>
+
+          <div id="cote" class="childpopup14"> </div>
+
+          <div class="childpopup13"><div class="valid-btn" onclick="Win_window()"> Valider </div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="winning">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup_2()">&times;</div>
+          <div class="grid2">
+            <div class="winner_2" id="win_or_lose_2">  </div>
+            <div class="winner" id="win_or_lose">  </div>
+            <div class="winner_3" id="win_or_lose_3">  </div>
+            <div class="winner_4" id="win_or_lose_4">  </div>
+          </div>
+      </div>
+    </div>
+</body>
+</html>

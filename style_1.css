@@ -1,0 +1,828 @@
+/* ====================================================================
+   ====================================================================
+                            Fenêtre principale
+   ====================================================================
+   ===================================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -----------------------------------------
+                    Grille 
+   ----------------------------------------- */
+
+.grid {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(100, 98, 98);
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(40, 50px);
+    grid-auto-flow: column;
+    grid-auto-columns: 20px;
+}
+
+
+/* ----------------------------------------------
+                        Titre 
+   ---------------------------------------------- */
+
+.child2 {
+    grid-column: 5/ 26;
+    grid-row: 1 / 3;
+    font-family: Brush Script MT;
+    font-size: 85px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
+
+
+/* -------------------------------------------------------------------------------
+     Logo n'étant pas du tout inspiré de celui de facebook situé au coin haut gauche 
+   --------------------------------------------------------------------------------*/
+
+.gallery {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* ------------------------------------------------------------------
+                Série de boutons représentants chaque pays 
+   ------------------------------------------------------------------ */
+
+.child {
+    grid-column: 1/ 5;
+    grid-row: 5 / 40;
+    overflow: scroll;
+}
+
+.childbis {
+    background: rgb(50, 50, 50);
+    grid-column: 1/ 5;
+    grid-row: 4 / 4;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.country-btn {
+    cursor: pointer;
+    width: 230px;
+    height: 40px;
+    border: 2px solid rgb(17, 17, 17);
+    background: rgb(25, 25, 25);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 40px;
+    text-align: right;
+    direction: rtl;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+}
+
+.country-btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(100, 100, 100, 0.5), 0 100px 100px 0 rgba(100, 100, 100, 0.5);
+    background: rgb(40, 40, 40);
+}
+
+
+/* ----------------------------------------------
+              Scroll des boutons
+   ---------------------------------------------- */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 68, 255);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 68, 225);
+}
+
+
+/* ------------------------------------------------------------------
+                            Titre de la carte
+   ------------------------------------------------------------------ */
+
+.child6 {
+    grid-column: 6/20;
+    background: rgb(50, 50, 50);
+    grid-row: 4/ 4;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* ------------------------------------------------------------------
+                            Menus déroulants  
+   ------------------------------------------------------------------ */
+
+.child7 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 20/25;
+    grid-row: 4 / 4;
+}
+
+
+/* Menu déroulant relatif au changement de catastrophe  */
+
+#lister {
+    background-color: rgb(0, 68, 255);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+/* Menu déroulant relatif au changement de pays pour l'histogramme du nombre de décès  */
+
+#lister3 {
+    background-color: rgb(0, 68, 255);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+/* Menu déroulant relatif au changement de pays pour l'histogramme de la catégorie de dommage */
+
+#lister4 {
+    background-color: rgb(0, 68, 255);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+/* ------------------------------------------------------------------
+                Caractéristiques générales de la carte
+   ------------------------------------------------------------------ */
+
+.child3 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 6/25;
+    grid-row: 5/ 14;
+}
+
+#map {
+    position: absolute;
+    top: 225px;
+    bottom: 0;
+    width: 1150px;
+    height: 460px;
+}
+
+
+/* ------------------------------------------------------------------
+                        Légendes de la carte
+   ------------------------------------------------------------------ */
+
+
+/* Légende : couleur
+   ----------------------- */
+
+
+/* Caractéristiques générales */
+
+.legend {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 465px;
+    right: 100px
+}
+
+
+/* Racourcit le haut et bas de la légende */
+
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+
+/* Style des ronds */
+
+.legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+}
+
+
+/* Légende: Pays - Nombre de catastrophes - Cote du pays 
+ ------------------------------------------------------- */
+
+.map-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    border-radius: 20px;
+}
+
+#features {
+    top: 210px;
+    right: 70px;
+    height: 130px;
+    margin-top: 20px;
+    width: 350px;
+}
+
+
+/* ----------------------------------------------
+                    Bouton paris 
+   ---------------------------------------------- */
+
+.pari_button {
+    cursor: pointer;
+    background-color: rgb(0, 68, 255);
+    grid-column: 6/25;
+    grid-row: 16/16;
+    text-align: center;
+    font-family: Impact;
+    font-size: 35px;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 200px;
+}
+
+.pari_button:hover {
+    background: rgb(0, 68, 220);
+}
+
+
+/* -------------------------------------------------
+                    Histogrammes 
+  -------------------------------------------------- */
+
+.child5 {
+    grid-column: 6/25;
+    grid-row: 19/ 26;
+    overflow: scroll;
+}
+
+.child5_bis {
+    background: rgb(50, 50, 50);
+    grid-column: 6/20;
+    grid-row: 18/ 18;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.child5_ter {
+    grid-column: 20/25;
+    grid-row: 18/ 18;
+}
+
+.child5_quad {
+    background: rgb(0, 0, 0);
+    grid-column: 6/20;
+    grid-row: 26/ 26;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: start;
+}
+
+.child4 {
+    grid-column: 6/25;
+    grid-row: 28/ 35;
+    overflow: scroll;
+}
+
+.child4_bis {
+    background: rgb(50, 50, 50);
+    grid-column: 6/20;
+    grid-row: 27/ 27;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.child4_ter {
+    grid-column: 20/25;
+    grid-row: 27/ 27;
+}
+
+.child4_quad {
+    background: rgb(0, 0, 0);
+    grid-column: 6/20;
+    grid-row: 35/ 35;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: start;
+}
+
+.child4_quint {
+    background: rgb(0, 0, 0);
+    grid-column: 6/25;
+    grid-row: 36/ 40;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: start;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    z-index: auto;
+}
+
+.layout {
+    text-align: center;
+    z-index: auto;
+}
+
+.container {
+    width: 15000px;
+    height: 325px;
+    margin: auto;
+    background-color: rgb(78, 78, 78);
+    z-index: auto;
+}
+
+.container2 {
+    width: 15000px;
+    height: 325px;
+    margin: auto;
+    background-color: rgb(78, 78, 78);
+    z-index: auto;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    z-index: auto;
+}
+
+.bar {
+    fill: rgb(45, 101, 255);
+    z-index: auto;
+}
+
+text {
+    font-size: 14px;
+    fill: #fff;
+    z-index: auto;
+}
+
+path {
+    stroke: gray;
+    z-index: auto;
+}
+
+line {
+    stroke: gray;
+    z-index: auto;
+}
+
+line#limit {
+    stroke: #FED966;
+    stroke-width: 3;
+    stroke-dasharray: 3 6;
+    z-index: auto;
+}
+
+.grid path {
+    stroke-width: 0;
+    z-index: auto;
+}
+
+.grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.3;
+    z-index: auto;
+}
+
+text.divergence {
+    font-size: 14px;
+    fill: #2F4A6D;
+    z-index: auto;
+}
+
+text.value {
+    font-size: 14px;
+    z-index: auto;
+}
+
+text.title {
+    font-size: 18px;
+    font-weight: 600;
+    z-index: auto;
+}
+
+text.label {
+    font-size: 14px;
+    font-weight: 400;
+    z-index: auto;
+}
+
+text.source {
+    font-size: 14px;
+    z-index: auto;
+}
+
+
+/* ====================================================================
+   ====================================================================
+                            Fenêtre de Paris
+   ====================================================================
+   ===================================================================== */
+
+
+/* --------------------------------------------------------------------
+                                Grille
+   -------------------------------------------------------------------- */
+
+.grid2 {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(38, 20px);
+    grid-template-rows: repeat(28, 20px);
+    grid-auto-flow: column;
+    grid-auto-columns: 20px;
+}
+
+
+/* ------------------
+      Bouton close
+   ------------------ */
+
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup .close-btn:hover {
+    background: rgb(160, 160, 160);
+}
+
+
+/* ---------------------
+      Bouton Valider
+   --------------------- */
+
+.childpopup13 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 16 / 24;
+    grid-row: 26 / 28;
+}
+
+.popup .valid-btn {
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.popup .valid-btn:hover {
+    background: rgb(160, 160, 160);
+}
+
+
+/* ------------------
+        Titre
+   ------------------ */
+
+.childpopup1 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 4 / 36;
+    grid-row: 1 / 3;
+    font-family: Impact;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+/* --------------------
+      Texte principal
+   -------------------- */
+
+.childpopup2 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 4 / 36;
+    grid-row: 4 / 7;
+    font-family: Arial;
+    font-size: 14px;
+    color: rgb(175, 175, 175);
+    text-align: start;
+}
+
+
+/* ---------------------
+      Texte votre mise
+   --------------------- */
+
+.childpopup3 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 8 / 20;
+    grid-row: 9 / 11;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: end;
+}
+
+
+/* ---------------------
+      Input votre mise
+   --------------------- */
+
+.childpopup4 {
+    background-color: rgb(0, 0, 0);
+    /*
+    border: 1px solid rgb(100, 98, 98);
+    */
+    grid-column: 22 / 30;
+    grid-row: 9 / 11;
+}
+
+
+/* ---------------------
+      Texte nom du pays
+   --------------------- */
+
+.childpopup5 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 8 / 20;
+    grid-row: 12 / 14;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: end;
+}
+
+
+/* ---------------------
+     Input notre pays
+   --------------------- */
+
+.childpopup6 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 22 / 30;
+    grid-row: 12 / 14;
+}
+
+
+/* --------------------------
+      Texte Nombre de décès 
+   -------------------------- */
+
+.childpopup7 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 8 / 20;
+    grid-row: 18 / 20;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: end;
+}
+
+
+/* --------------------------
+      Input Nombre de décès 
+   -------------------------- */
+
+.childpopup8 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 22 / 30;
+    grid-row: 18 / 20;
+}
+
+
+/* -----------------------------
+      Texte Dommages engendrés 
+   ----------------------------- */
+
+.childpopup9 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 5 / 20;
+    grid-row: 21 / 23;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: end;
+}
+
+
+/* -----------------------------
+      Input Dommages engendrés 
+   ----------------------------- */
+
+.childpopup10 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 22 / 30;
+    grid-row: 21 / 23;
+}
+
+
+/* -----------------------------
+      Texte choix catastrophe 
+   ----------------------------- */
+
+.childpopup11 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 5 / 20;
+    grid-row: 15 / 17;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: end;
+}
+
+
+/* -----------------------------
+      Select choix catastrophe
+   ----------------------------- */
+
+.childpopup12 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 22 / 30;
+    grid-row: 15 / 17;
+}
+
+
+/* -----------------------------
+      Texte choix catastrophe 
+   ----------------------------- */
+
+.childpopup14 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 18 / 28;
+    grid-row: 24 / 24;
+    font-family: Arial;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
+
+
+/* -----------------------------
+      Fenetre de pari
+   ----------------------------- */
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgb(0, 0, 0);
+    border: 4px solid rgb(100, 98, 98);
+    width: 800px;
+    height: 600px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* ====================================================================
+   ====================================================================
+                            Fenêtre de la win
+   ====================================================================
+   ===================================================================== */
+
+
+/* ------------------
+      Titre
+   ------------------ */
+
+.winner_2 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 4 / 36;
+    grid-row: 1 / 3;
+    font-family: Impact;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+/* ----------------------------
+       Premier paragraphe
+   ------------------------- */
+
+.winner {
+    background-color: rgb(0, 0, 0);
+    grid-column: 4 / 36;
+    grid-row: 4 / 28;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
+
+
+/* ----------------------------
+       Premier paragraphe
+   ------------------------- */
+
+.winner_3 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 4 / 36;
+    grid-row: 12 / 28;
+    font-family: Arial;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+/* ----------------------------
+       dernier paragraphe
+   ------------------------- */
+
+.winner_4 {
+    background-color: rgb(0, 0, 0);
+    grid-column: 4 / 36;
+    grid-row: 17 / 28;
+    font-family: Arial;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+}
