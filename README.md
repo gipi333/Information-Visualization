@@ -23,7 +23,7 @@ An interactive map, where the different disasters can be seen, has been created.
 Two histograms were created to visualize the number of victims and cost of damages. A button is placed on top right of the histogram to change the country and therefore the histogram and the title of the histogram. A slider has been created in order to visualize all the events.
 
 <p align="center">
-<img src="https://github.com/gipi333/Information-Visualization/blob/main/deces.png" width="450" height="240"> <img src="https://github.com/gipi333/Information-Visualization/blob/main/dmg.png" width="450" height="240">
+<img src="https://github.com/gipi333/Information-Visualization/blob/main/deces.png" width="400" height="200"> <img src="https://github.com/gipi333/Information-Visualization/blob/main/dmg.png" width="400" height="200">
 
 </p>
 
