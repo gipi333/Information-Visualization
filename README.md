@@ -13,6 +13,8 @@ A dataset containing five json files was given and a website, where these databa
 An interactive map, where the different disasters can be seen, has been created. A button is placed on top right of the map to change the type of disaster and therefore the map and the title of the map. With this map, we can zoom in and out. Moreover, when the cursor is on a country, the name and the number of disasters appear. There is also a color scale to visualize number disaster occurring in a country.
 
 <img src="https://github.com/gipi333/Information-Visualization/blob/main/tremblement.png" width="550" height="280">
+<img src="https://github.com/gipi333/Information-Visualization/blob/main/tsu.png" width="550" height="280">
+<img src="https://github.com/gipi333/Information-Visualization/blob/main/eruption.png" width="550" height="280">
 
 
 ![tremblement](https://user-images.githubusercontent.com/101716649/208101990-c83c0fb2-ad52-4ec7-a90a-fd02606a2331.png)
